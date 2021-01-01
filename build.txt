@@ -1,0 +1,27 @@
+# My Enviroment : Ubuntu 20.10 (groovy) chroot in Android Device
+
+How to build static qemu executable in Android ?
+
+# Download Qemu Tarball from official site (http://qemu.org)
+# Extract tar xvf qemu-***.tar.xz
+# Create "build" directory inside qemu folder and go to build folder
+# And execute with "--static" flag
+
+../configure --static --enable-...
+make -j4
+make install
+
+# for eg. --enable-spice --enable-opengl...  , to get help ../configure --help
+
+Known Error :
+
+# While building static qemu , errors may pop up because it will need static library( lib***.a and lib***.so)
+# for linking even if you had install packages
+
+How to get static library ?
+
+# Assuming error : "cannot find -lmount"
+# to fix this, you need static library (libmount.a and libmount.so)
+# to get this library, you need to recompile source of respected required library
+# libmount is part of util-linux, so download util-linux source and
+# recompiled statically (../configure --enable-static ... ; make -j* ; make install )
