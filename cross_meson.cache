@@ -1,0 +1,22 @@
+[host_machine]
+system = 'linux'
+cpu_family = 'aarch64'
+cpu = 'aarch64'
+endian = 'little'  
+[built-in options]
+c_args = ['-I/data/data/com.termux/files/usr/include']
+c_link_args = ['-liconv']                                                              
+cpp_link_args = ['-L/data/data/com.termux/files/usr/lib']
+sys_root = ['/data/data/com.termux/files', '/home/runner/clang/sysroot']   
+c_std = 'gnu11'
+cpp_std = 'gnu++11'
+	    
+[binaries]
+c = 'aarch64-linux-android-gcc'
+cpp = 'aarch64-linux-android-g++'
+ar = 'aarch64-linux-android-ar'
+ld = 'aarch64-linux-android-ld'
+objcopy = 'aarch64-linux-android-objcopy'
+strip = 'aarch64-linux-android-strip'
+pkgconfig = 'aarch64-linux-android-pkg-config'
+										  
