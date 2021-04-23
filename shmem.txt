@@ -1,3 +1,4 @@
+#include <errno.h>
 static int shm_unlink(const char *name) {
     size_t namelen;
     char *fname;
