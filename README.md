@@ -1,6 +1,5 @@
-# Qemu-Binary-Android
-Qemu system static executable for Android
+# packages
+(cross_meson.cache) meson cross file to build packages for aarch64 host with Android NDK
 
-# Update :
-Work in progress , qemu with spice enabled for termux
-Packages.tar.xz contains glib,pixman,jpeg,png prebuilt packages for arm64 which is to be use for qemu building
+shmem.txt :
+shm_open() and shm_unlink() functions for termux
