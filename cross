@@ -1,0 +1,19 @@
+[host_machine]
+system = 'linux'
+cpu_family = 'arm'
+cpu = 'arm'
+endian = 'little'
+[built-in options]
+c_args = ['--target=arm-linux-androideabi', '-I$HOME/qemu-termux/include/glib-2.0', '-I$HOME/qemu-termux/include/glib-2.0/include -I$HOME/qemu-termux/include/pixman-1 -L$HOME/qemu-arm/lib']
+						      
+c_link_args = ['--target=arm-linux-androideabi', '-landroid-glob', '-latomic']
+								   		 													
+cpp_args = ['--target=arm-linux-androideabi']
+		  
+pkg_config_path = ['/data/data/com.termux/files/home/qemu-arm/share/pkgconfig', '/data/data/com.termux/files/home/qemu-arm/lib/pkgconfig']
+cpp_link_args = ['--target=arm-linux-androideabi', '-latomic']
+[binaries]
+c = 'clang'
+cpp = 'clang++'		
+pkgconfig = 'pkg-config'			
+							
